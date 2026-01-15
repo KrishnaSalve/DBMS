@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</head>
+<body>
+    <div class="container">
+        <a href="/" class="btn btn-primary">Home</a>
+        <a href="/update" class="btn btn-primary">Update</a>
+        <a href="/delete" class="btn btn-primary">Delete</a>
+        <a href="/database" class="btn btn-primary">Database</a>
+
+        <h1 class="text-center">Welcome to My Flask App!</h1>
+        <img src="{{url_for('static', filename='Thor.jpg')}}" alt="Thor" width="500px" height="300px">
+        <p class="text-center">This is a simple example of rendering an HTML page with Flask.</p>
+    </div>
+    <div class="container my-5 text-light" data-bs-theme="dark">
+        <form action="/" method="post">
+            <div class="mb-3">
+                <label class="form-label" for="exampleInputEmail1">Email: </label>
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="someone@example.com">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="exampleInputPassword1">Password: </label>
+                <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
